@@ -4,10 +4,10 @@
         <table class="table table-bordered">
             <thead>
                 <tr class="table-head">
-                    <th style="width: 30%">Name</th>
-                    <th style="width: 10%">Size</th>
-                    <th style="width: 30%">Courses</th>
-                    <th style="width: 20%">Unavailable Rooms</th>
+                    <th style="width: 30%">Nama</th>
+                    <th style="width: 10%">Kapasitas</th>
+                    <th style="width: 30%">Mata Kuliah</th>
+                    <th style="width: 20%">Pengecualian Ruang</th>
                     <th style="width: 10%">Actions</th>
                 </tr>
             </thead>
@@ -40,7 +40,7 @@
                             @endforeach
                         </ul>
                         @else
-                        None specified
+                        Tidak ada
                         @endif
                     </td>
                     <td>

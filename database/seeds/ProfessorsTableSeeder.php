@@ -13,37 +13,37 @@ class ProfessorsTableSeeder extends Seeder
     {
         DB::table('professors')->insert([
             [
-                'name' => 'Dr Theophilus Asare'
+                'name' => 'Andi Kusuma Indrawan, S.Kom., M.T.'
             ],
             [
-                'name' => 'Dr Richman Clifford'
+                'name' => 'Drs. Apit Miharso, Ak., M.Pd'
             ],
             [
-                'name' => 'Dr Ahmed Dawuda'
+                'name' => 'Yusna, S.E., M.Si., Ak.'
             ],
             [
-                'name' => 'Dr Jehoshaphat Koney'
+                'name' => 'Elvyra Handayani Soedarso, S.E., M.SA.'
             ],
             [
-                'name' => 'Dr Godfred Addai'
+                'name' => 'Drs. Muhamad Muwidha, M.SI.'
             ],
             [
-                'name' => 'Dr Gideon Appoh'
+                'name' => 'Dr. Nurafni Eltivia, S.E., M.SA.'
             ],
             [
-                'name' => 'Dr Papa Yaw Afriyie',
+                'name' => 'Dr. Aang Afandi, S.E., M.M',
             ],
             [
-                'name' => 'Dr Benjamin Ikeh'
+                'name' => 'Drs. Ahmad Jarnuzi, Ak., M.SI.'
             ],
             [
-                'name' => 'Larry Gates'
+                'name' => 'Andi Asdani, S.E., M.M. '
             ],
             [
-                'name' => 'John Showman'
+                'name' => 'Dr. Dra. Anik Kusmintarti, M.M.'
             ],
             [
-                'name' => 'Richard Hendricks'
+                'name' => 'Anik Kusnawati, S.Pd., M.Pd., Ph.D. '
             ]
         ]);
 

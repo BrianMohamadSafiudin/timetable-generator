@@ -13,6 +13,7 @@ Professor.prototype.prepareForUpdate = function (resource) {
     $('input[name=email]').val(resource.email);
     $('#courses-select').val(resource.course_ids).change();
     $('#periods-select').val(resource.periods).change();
+    $('#rooms-select').val(resource.room_ids).change();
 };
 
 window.addEventListener('load', function () {

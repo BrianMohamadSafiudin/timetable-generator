@@ -13,32 +13,32 @@ class DaysTableSeeder extends Seeder
     {
         $days = [
             [
-                'name' => 'Monday',
-                'short_name' => 'Mon'
+                'name' => 'Senin',
+                'short_name' => 'Sen'
             ],
             [
-                'name' => 'Tuesday',
-                'short_name' => 'Tue'
+                'name' => 'Selasa',
+                'short_name' => 'Sel'
             ],
             [
-                'name' => 'Wednesday',
-                'short_name' => 'Wed'
+                'name' => 'Rabu',
+                'short_name' => 'Rab'
             ],
             [
-                'name' => 'Thursday',
-                'short_name' => 'Thur'
+                'name' => 'Kamis',
+                'short_name' => 'Kam'
             ],
             [
-                'name' => 'Friday',
-                'short_name' => 'Fri'
+                'name' => 'Jumat',
+                'short_name' => 'Jum'
             ],
             [
-                'name' => 'Saturday',
-                'short_name' => 'Sat'
+                'name' => 'Sabtu',
+                'short_name' => 'Sab'
             ],
             [
-                'name' => 'Sunday',
-                'short_name' => 'Sun'
+                'name' => 'Minggu',
+                'short_name' => 'Min'
             ]
         ];
 

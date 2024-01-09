@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Room;
 use Response;
 use Illuminate\Http\Request;
 use App\Services\ProfessorsService;
@@ -48,6 +49,7 @@ class ProfessorsController extends Controller
             'per_page' => 20
         ]);
 
+        $rooms = Room::all();
         $courses = Course::all();
         $days = Day::all();
         $timeslots = Timeslot::all();
@@ -56,7 +58,7 @@ class ProfessorsController extends Controller
             return view('professors.table', compact('professors'));
         }
 
-        return view('professors.index', compact('professors', 'courses', 'days', 'timeslots'));
+        return view('professors.index', compact('professors', 'courses', 'days', 'timeslots', 'rooms'));
     }
 
     /**

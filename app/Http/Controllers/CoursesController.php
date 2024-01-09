@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Room;
 use Response;
 use Illuminate\Http\Request;
 use App\Services\CoursesService;
@@ -41,13 +42,14 @@ class CoursesController extends Controller
             'per_page' => 20
         ]);
 
+        $rooms = Room::all();
         $professors = Professor::all();
 
         if ($request->ajax()) {
             return view('courses.table', compact('courses'));
         }
 
-        return view('courses.index', compact('courses', 'professors'));
+        return view('courses.index', compact('courses', 'professors', 'rooms'));
     }
 
     /**

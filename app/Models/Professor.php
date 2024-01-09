@@ -21,6 +21,15 @@ class Professor extends Model
     protected $guarded = ['id'];
 
     /**
+     * Get the rooms that are not available to this professor
+     */
+
+    public function unavailable_rooms_professors()
+    {
+        return $this->belongsToMany(Room::class, 'unavailable_rooms_professors', 'professor_id', 'room_id');
+    }
+
+    /**
      * Declare relationship between a professor and the courses
      * he or she teaches
      *

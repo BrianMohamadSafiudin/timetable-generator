@@ -1,7 +1,7 @@
 <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 sidebar">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 site-logo-container">
-            <h3 class="text-center site-logo">timetable</h3>
+            <h3 class="text-center site-logo">Sistem Penjadwalan</h3>
         </div>
     </div>
 
@@ -13,19 +13,19 @@
                     <a href="/dashboard"><span class="fa fa-dashboard"></span><span class="text">Dashboard</span></a>
                 </li>
                 <li class="menu-link {{ ($page == 'rooms') ? 'active' : '' }}">
-                    <a href="/rooms"><span class="fa fa-home"></span><span class="text">Rooms</span></a>
+                    <a href="/rooms"><span class="fa fa-home"></span><span class="text">Ruang Kelas</span></a>
                 </li>
                 <li class="menu-link {{ ($page == 'courses') ? 'active' : '' }}">
-                    <a href="/courses"><span class="fa fa-book"></span><span class="text">Courses</span></a>
+                    <a href="/courses"><span class="fa fa-book"></span><span class="text">Mata Kuliah</span></a>
                 </li>
                 <li class="menu-link {{ ($page == 'professors') ? 'active' : '' }}">
-                    <a href="/professors"><span class="fa fa-graduation-cap"></span><span class="text">Professors</span></a>
+                    <a href="/professors"><span class="fa fa-graduation-cap"></span><span class="text">Dosen</span></a>
                 </li>
                 <li class="menu-link {{ ($page == 'classes') ? 'active' : '' }}">
-                    <a href="/classes"><span class="fa fa-users"></span><span class="text">Classes</span></a>
+                    <a href="/classes"><span class="fa fa-users"></span><span class="text">Kelas</span></a>
                 </li>
                 <li class="menu-link {{ ($page == 'timeslots') ? 'active' : '' }}">
-                    <a href="/timeslots"><span class="fa fa-clock-o"></span><span class="text">Periods</span></a>
+                    <a href="/timeslots"><span class="fa fa-clock-o"></span><span class="text">Periode</span></a>
                 </li>
                 <li class="menu-link {{ ($page == 'my_account') ? 'active' : '' }}">
                     <a href="/my_account"><span class="fa fa-user"></span><span class="text">My Account</span></a>

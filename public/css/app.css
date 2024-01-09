@@ -19,8 +19,8 @@
 }
 
 .login-form-header {
-    background: #B0262E;
-    border: 1px solid #B0262E;
+    background: #0c53c0;
+    border: 1px solid #0c53c0;
     color: #FFFFFF;
     height: 60px;
 }
@@ -31,14 +31,14 @@
 }
 
 .login-form-body {
-    border: 1px solid #B0262E;
+    border: 1px solid #0c53c0;
     background: #FFFFFF;
     padding: 10px;
 }
 
 /** Style for buttons */
 .btn-custom {
-    background: #B0262E;
+    background: #0c53c0;
     color: #FFFFFF;
 }
 
@@ -54,19 +54,19 @@
 }
 
 .site-logo {
-    color: #FFFFFF !important;
+    color: #0c53c0 !important;
     font-size: 1.7em;
     font-weight: bold;
 }
 
 .sidebar {
-   background: #FF6347;
+   background: #0c53c0;
    height: 180vh;
 }
 
 /** Menu **/
 .site-logo-container {
-    background-color: #B22222;
+    background-color: #FFF;
     height: 70px;
 }
 
@@ -97,7 +97,7 @@
 
 .menu li:hover, .menu li.active {
     color: #FFFFFF;
-    background-color: #DC143C;
+    background-color: #0c53c0;
     font-weight: bold;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .page-title {
-    background-color: #FF6347;
+    background-color: #0c53c0;
     color: #FFFFFF;
     height: 70px;
 }
@@ -139,7 +139,7 @@
     text-align: left;
     padding-top: 5px;
     padding-bottom: 4px;
-    background: linear-gradient(rgb(229, 76, 16), rgb(172, 78, 41));
+    background: #0c53c0;
     color: #FFFFFF;
 }
 
@@ -153,19 +153,27 @@ tbody tr:nth-of-type(odd) {
 
 /** Redefinition for buttons */
 .btn-primary{
-    background: #5F9EA0;
+    background: #198754;
+/*    round*/
+    border-radius: 5px !important;
 }
 
 .btn-primary:hover, .btn-primary:focus {
     background: #008B8B;
+    border-radius: 15px;
+
 }
 
 .btn-danger {
-    background: #FF6347;
+    background: #DC143C;
+    border-radius: 5px !important;
+
 }
 
 .btn-danger:hover {
     background: #DC143C;
+    border-radius: 15px;
+
 }
 
 /** Pagination buttons **/
@@ -225,7 +233,7 @@ tbody tr:nth-of-type(odd) {
 
 /** Dashboard */
 .card-1 {
-    background: #FF6347;
+    background: #0c53c0;
 }
 
 .card-2 {
@@ -233,11 +241,11 @@ tbody tr:nth-of-type(odd) {
 }
 
 .card-3 {
-    background: #3CB371;
+    background: #49d765;
 }
 
 .card-4 {
-    background: #4682B4;
+    background: #0dcaf0;
 }
 
 .card-title {
@@ -263,7 +271,7 @@ tbody tr:nth-of-type(odd) {
 .timetable-btn {
     font-size: 2em;
     border: none;
-    padding: 10px;
+    padding: 15px;
 }
 
 .input-group-btn .btn {

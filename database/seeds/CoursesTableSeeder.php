@@ -13,104 +13,104 @@ class CoursesTableSeeder extends Seeder
     {
         DB::table('courses')->insert([
             [
-                'name' => 'Computer Architecture',
-                'course_code' => 'CSM 301'
+                'name' => 'PENGANTAR AKUNTANSI',
+                'course_code' => 'AKT 221001'
             ],
             [
-                'name' => 'Computer Graphics',
-                'course_code' => 'CSM 302'
+                'name' => 'PENGANTAR BISNIS',
+                'course_code' => 'AKT 221002'
             ],
             [
-                'name' => 'Data Structures and Algorithms I',
-                'course_code' => 'CSM 303'
+                'name' => 'PENGANTAR EKONOMI',
+                'course_code' => 'AKT 221003'
             ],
             [
-                'name' => 'Survey Of Programming Languages',
-                'course_code' => 'CSM 304'
+                'name' => 'APLIKASI  KOMPUTER BISNIS 1',
+                'course_code' => 'AKT 221004'
             ],
             [
-                'name' => 'System Analysis',
-                'course_code' => 'CSM 305'
+                'name' => 'BAHASA  INGGRIS  DASAR',
+                'course_code' => 'AKT 221005'
             ],
             [
-                'name' => 'Artificial Intelligence',
-                'course_code' => 'CSM 306'
+                'name' => 'PENGETIKAN NIAGA',
+                'course_code' => 'AKT 221006'
             ],
             [
-                'name' => 'Operations Research I',
-                'course_code' => 'CSM 307'
+                'name' => 'PENDIDIKAN PANCASILA',
+                'course_code' => 'AKT 221007'
             ],
             [
-                'name' => 'Web Development',
-                'course_code' => 'CSM 308'
+                'name' => 'MATEMATIKA KEUANGAN',
+                'course_code' => 'AKT 221008'
             ],
             [
-                'name' => 'Data Structures And Algorithms II',
-                'course_code' => 'CSM 311'
+                'name' => 'AKUNTANSI BIAYA',
+                'course_code' => 'AKT 223001'
             ],
             [
-                'name' => 'Operations Research II',
-                'course_code' => 'CSM 312'
+                'name' => 'AKUNTANSI KEUANGAN MENENGAH 2',
+                'course_code' => 'AKT 223002'
             ],
             [
-                'name' => 'Real time and Embedded Systems',
-                'course_code' => 'CSM 313'
+                'name' => 'SISTEM  INFORMASI AKUNTANSI',
+                'course_code' => 'AKT 223003'
             ],
             [
-                'name' => 'Ecommerce',
-                'course_code' => 'CSM 314'
+                'name' => 'AKUNTANSI SEKTOR  PUBLIK',
+                'course_code' => 'AKT 223004'
             ],
             [
-                'name' => 'Accounting',
-                'course_code' => 'CSM 315'
+                'name' => 'PERPAJAKAN',
+                'course_code' => 'AKT 223005'
             ],
             [
-                'name' => 'Computer Networks',
-                'course_code' => 'CSM 401'
+                'name' => 'APLIKASI KOMPUTER BISNIS 3',
+                'course_code' => 'AKT 223006'
             ],
             [
-                'name' => 'Computer Security',
-                'course_code' => 'CSM 402'
+                'name' => 'BAHASA INGGRIS BISNIS 2',
+                'course_code' => 'AKT 223007'
             ],
             [
-                'name' => 'Information Systems',
-                'course_code' => 'CSM 403'
+                'name' => 'BAHASA  INDONESIA',
+                'course_code' => 'AKT 223008'
             ],
             [
-                'name' => 'Expert Systems',
-                'course_code' => 'CSM 404'
+                'name' => 'AKUNTANSI KEUANGAN LANJUTAN',
+                'course_code' => 'AKT 215001'
             ],
             [
-                'name' => 'Computer Vision',
-                'course_code' => 'CSM 405'
+                'name' => 'PRAKTIKUM SISTEM INFORMASI AKUNTANSI',
+                'course_code' => 'AKT 215002'
             ],
             [
-                'name' => 'Software Engineering I',
-                'course_code' => 'CSM 406'
+                'name' => 'AKUNTANSI SEKTOR PUBLIK',
+                'course_code' => 'AKT 215003'
             ],
             [
-                'name' => 'Cyber Security',
-                'course_code' => 'CSM 407'
+                'name' => 'TEKNIK AUDIT BERBANTUAN KOMPUTER',
+                'course_code' => 'AKT 215004'
             ],
             [
-                'name' => 'Robotics',
-                'course_code' => 'CSM 411'
+                'name' => 'MANAJEMEN KEUANGAN',
+                'course_code' => 'AKT 215005'
             ],
             [
-                'name' => 'Graph Theory',
-                'course_code' => 'CSM 412'
+                'name' => 'PENGANGGARAN',
+                'course_code' => 'AKT 215006'
             ],
             [
-                'name' => 'Number Theory',
-                'course_code' => 'CSM 413'
+                'name' => 'BAHASA INGGRIS BISNIS 2',
+                'course_code' => 'AKT 215007'
             ],
             [
-                'name' => 'French',
-                'course_code' => 'CSM 414'
+                'name' => 'ASPEK HUKUM DALAM BISNIS',
+                'course_code' => 'AKT 215008'
             ],
             [
-                'name' => 'Software Engineering II',
-                'course_code' => 'CSM 415'
+                'name' => 'PENGANTAR AKUNTANSI',
+                'course_code' => 'AKM 231001'
             ]
         ]);
     }

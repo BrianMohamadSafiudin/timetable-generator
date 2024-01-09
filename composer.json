@@ -9,8 +9,7 @@
         "barryvdh/laravel-dompdf": "^2.0",
         "laravel/framework": "10.*.*",
         "laravel/tinker": "~2.8",
-        "pda/pheanstalk": "^4.0",
-        "predis/predis": "^2.2"
+        "pda/pheanstalk": "^4.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8",

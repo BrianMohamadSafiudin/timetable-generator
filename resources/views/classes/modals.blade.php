@@ -27,19 +27,19 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Courses <i class="fa fa-plus side-icon" title="Add Course" id="course-add"></i></label>
+                                <label>Courses <i class="fa fa-plus side-icon" title="Tambah Mata Kuliah" id="course-add"></i></label>
 
                                 <div class="row">
                                     <div class="col-md-4 col-sm-7 col-xs-12">
-                                        Course
+                                        Mata Kuliah
                                     </div>
 
                                     <div class="col-md-4 col-sm-12 col-xs-12">
-                                        Academic Period
+                                        Semester
                                     </div>
 
                                     <div class="col-md-3 col-sm-5 col-xs-12">
-                                        Meetings Per Week
+                                        Jumlah Pertemuan Perminggu
                                     </div>
                                 </div>
 
@@ -49,12 +49,12 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Population</label>
+                                <label>Kapasitas</label>
                                 <input type="text" name="size" class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <label>Unavailable Lecture Rooms</label>
+                                <label>Pengecualian Ruang</label>
 
                                 <div class="select2-wrapper">
                                     <select id="rooms-select" name="room_ids[]" class="form-control select2" multiple>

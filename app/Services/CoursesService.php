@@ -45,6 +45,7 @@ class CoursesService extends AbstractService
             $data['professor_ids'] = [];
         }
 
+        $course->unavailable_rooms_courses()->sync($data['room_ids']);
         $course->professors()->sync($data['professor_ids']);
 
         return $course;
@@ -60,6 +61,7 @@ class CoursesService extends AbstractService
     {
         $course = Course::find($id);
         $professorIds = [];
+        $roomIds = [];
 
         if (!$course) {
             return null;
@@ -69,7 +71,12 @@ class CoursesService extends AbstractService
             $professorIds[] = $professor->id;
         }
 
+        foreach ($course->unavailable_rooms_courses as $room) {
+            $roomIds[] = $room->id;
+        }
+
         $course->professor_ids = $professorIds;
+        $course->room_ids = $roomIds;
 
         return $course;
     }
@@ -98,7 +105,7 @@ class CoursesService extends AbstractService
             $data['professor_ids'] = [];
         }
 
-
+        $course->unavailable_rooms_courses()->sync($data['room_ids']);
         $course->professors()->sync($data['professor_ids']);
 
         return $course;

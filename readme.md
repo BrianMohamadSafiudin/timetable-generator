@@ -1,16 +1,7 @@
 ## About
 
-<p align="left">
-  <a href="https://laravel.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="200" alt="Laravel Logo">
-  </a>
-    <a href="https://svgsilh.com/svg/39658.svg" target="_blank">
-    <img src="https://svgsilh.com/svg/39658.svg" width="30" alt="Bootstrap Logo">
-  </a>
-<a href="https://www.svgrepo.com/show/303251/mysql-logo.svg" target="_blank">
-    <img src="https://www.svgrepo.com/show/303251/mysql-logo.svg" width="75" alt="Bootstrap Logo">
-  </a>
-</p>
+![hhh](https://github.com/olaysco/timetable-generator/assets/7990807/cab77421-b70e-4402-b825-5a61fa619584)
+
 
 This project is a web application designed to facilitate timetable generation for a college. Users can input the necessary data, and the application utilizes a genetic algorithm to generate timetables on demand. The development of this web application involves using the Laravel PHP framework and jQuery.
 

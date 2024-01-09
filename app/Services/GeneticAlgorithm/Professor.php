@@ -24,12 +24,14 @@ class Professor
      *
      * @param int $id ID of professor
      * @param array $occupiedSlots Timeslots that the professor is not available
+     * @param array $occupiedRooms Rooms that the professor is not available
      */
-    public function __construct($id, $occupiedSlots)
+    public function __construct($id, $occupiedSlots, $occupiedRooms)
     {
         $this->id = $id;
         $this->professorModel = ProfessorModel::find($this->id);
         $this->occupiedSlots = $occupiedSlots;
+        $this->occupiedRooms = $occupiedRooms;
     }
 
     /**
@@ -55,5 +57,10 @@ class Professor
     public function getOccupiedSlots()
     {
         return $this->occupiedSlots;
+    }
+
+    public function getOccupiedRooms()
+    {
+        return $this->occupiedRooms;
     }
 }

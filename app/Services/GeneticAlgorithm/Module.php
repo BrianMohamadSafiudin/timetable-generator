@@ -39,13 +39,15 @@ class Module
      *
      * @param int $moduleId ID of module or course
      * @param array  $professorIds Professors treating this module
+     * @param array $occupiedRooms Rooms that the module is not available
      */
-    public function __construct($moduleId, $professorIds)
+    public function __construct($moduleId, $professorIds, $occupiedRooms)
     {
         $this->moduleId = $moduleId;
         $this->moduleModel = Course::find($moduleId);
         $this->professorIds = $professorIds;
         $this->allocatedSlots = 0;
+        $this->occupiedRooms = $occupiedRooms;
     }
 
     /**
@@ -123,5 +125,10 @@ class Module
     {
         $pos = rand(0, count($this->professorIds) - 1);
         return $this->professorIds[$pos];
+    }
+
+    public function getOccupiedRooms()
+    {
+        return $this->occupiedRooms;
     }
 }

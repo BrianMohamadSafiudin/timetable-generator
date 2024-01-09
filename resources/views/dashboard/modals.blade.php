@@ -7,7 +7,7 @@
                     <span aria-hidden="true">x</span>
                 </button>
 
-                <h4 class="modal-heading">Create New Timetables</h4>
+                <h4 class="modal-heading">Generate Jadwal Baru</h4>
             </div>
 
             <form class="form" method="POST" action="" id="resource-form">
@@ -22,15 +22,15 @@
                             {{ csrf_field() }}
 
                             <div class="form-group">
-                                <label>Timetable Name</label>
+                                <label>Nama</label>
                                 <input type="text" name="name" class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <label>Academic Period</label>
+                                <label>Semester</label>
                                 <div class="select2-wrapper">
                                     <select class="form-control select2" name="academic_period_id">
-                                        <option value="" selected>Select an academic period</option>
+                                        <option value="" selected>Pilih Semester</option>
                                         @foreach ($academicPeriods as $period)
                                         <option value="{{ $period->id }}">{{ $period->name }}</option>
                                         @endforeach
@@ -39,7 +39,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Select Days</label>
+                                <label>Hari</label>
 
                                 @foreach ($days as $day)
                                 <div class="form-group">

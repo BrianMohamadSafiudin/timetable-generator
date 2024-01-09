@@ -4,9 +4,10 @@
         <table class="table table-bordered">
             <thead>
                 <tr class="table-head">
-                    <th style="width: 30%">Course Code</th>
-                    <th style="width: 30%">Name</th>
-                    <th style="width: 30%">Taught By</th>
+                    <th style="width: 20%">Kode Matkul</th>
+                    <th style="width: 20%">Name</th>
+                    <th style="width: 20%">Dosen</th>
+                    <th style="width: 20%">Pengecualian Ruang</th>
                     <th style="width: 10%">Actions</th>
                 </tr>
             </thead>
@@ -22,6 +23,17 @@
                         <li>{{ $professor->name }}</li>
                         @endforeach
                         </ul>
+                    </td>
+                    <td>
+                        @if(count($course->unavailable_rooms_courses))
+                        <ul>
+                            @foreach ($course->unavailable_rooms_courses as $room)
+                                <li>{{ $room->name }}</li>
+                            @endforeach
+                        </ul>
+                        @else
+                        Tidak ada
+                        @endif
                     </td>
                     <td>
                     <button class="btn btn-primary btn-sm resource-update-btn" data-id="{{ $course->id }}"><i class="fa fa-pencil"></i></button>

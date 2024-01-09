@@ -131,10 +131,11 @@ class Timetable
      *
      * @param int $professorId Id of professor
      * @param string $unavailableSlots Slots that the professor can't teach
+     * @param array $unavailableRooms Rooms that the professor can't teach in
      */
-    public function addProfessor($professorId, $unavailableSlots)
+    public function addProfessor($professorId, $unavailableSlots, $unavailableRooms)
     {
-        $this->professors[$professorId] = new Professor($professorId, $unavailableSlots);
+        $this->professors[$professorId] = new Professor($professorId, $unavailableSlots, $unavailableRooms);
     }
 
     /**
@@ -143,9 +144,9 @@ class Timetable
      * @param int $moduleId Id of module
      * @param array $professorIds Ids of professors
      */
-    public function addModule($moduleId, $professorIds)
+    public function addModule($moduleId, $professorIds, $unavailableRoomsCourses)
     {
-        $this->modules[$moduleId] = new Module($moduleId, $professorIds);
+        $this->modules[$moduleId] = new Module($moduleId, $professorIds, $unavailableRoomsCourses);
     }
 
     /**
@@ -416,6 +417,67 @@ class Timetable
             // Check if we don't have any lecturer forced to teach at his occupied time
             if (in_array($timeslot->getId(), $professor->getOccupiedSlots())) {
                 $clashes++;
+            }
+
+            // Check if we don't have any lecturer forced to teach at his occupied room
+            if (in_array($classA->getRoomId(), $professor->getOccupiedRooms())) {
+                $clashes++;
+            }
+
+            // Check if we don't have any course forced to be taught at its unavailable room
+            if (in_array($classA->getRoomId(), $module->getOccupiedRooms())) {
+                $clashes++;
+            }
+
+            // Check if we don't have same group in two classes at same time
+            foreach ($this->classes as $id => $classB) {
+                if ($classA->getId() != $classB->getId()) {
+                    if (($classA->getGroupId() == $classB->getGroupId()) && ($classA->getTimeslotId() == $classB->getTimeslotId())) {
+                        $clashes++;
+
+                        // Check if the module has more than one meeting
+                        $module = $this->getModule($classA->getModuleId());
+                        if ($module->getSlots($classA->getGroupId()) > 1) {
+                            // implement logic to ensure Ensure that each course with more than one meeting gets the same day, room, professor, and consecutive timeslots
+
+                        }
+
+                        break;
+                    }
+                }
+            }
+
+            // Check if the module has more than one meeting
+            $module = $this->getModule($classA->getModuleId());
+            if ($module->getSlots($classA->getGroupId()) > 1) {
+                // Get all classes for the same module and group
+                $sameModuleClasses = [];
+                foreach ($this->classes as $classB) {
+                    if ($classA->getModuleId() == $classB->getModuleId() && $classA->getGroupId() == $classB->getGroupId()) {
+                        $sameModuleClasses[] = $classB;
+                    }
+                }
+                print $sameModuleClasses;
+
+                // Check if all these classes have the same room, professor, and day
+                $room = $classA->getRoomId();
+                $professor = $classA->getProfessorId();
+                $day = $this->getTimeslot($classA->getTimeslotId())->getDayId();
+                foreach ($sameModuleClasses as $classB) {
+                    if ($room != $classB->getRoomId() || $professor != $classB->getProfessorId() || $day != $this->getTimeslot($classB->getTimeslotId())->getDayId()) {
+                        $clashes++;
+                        break;
+                    }
+                }
+
+                // Check if the timeslots for these classes are consecutive
+                $timeslots = [];
+                foreach ($sameModuleClasses as $classB) {
+                    $timeslots[] = $this->getTimeslot($classB->getTimeslotId())->getId();
+                }
+                if (!$this->areConsecutive($timeslots)) {
+                    $clashes++;
+                }
             }
 
             // Check if room is taken

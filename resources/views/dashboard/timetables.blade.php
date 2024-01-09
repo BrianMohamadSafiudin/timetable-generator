@@ -4,7 +4,7 @@
         <table class="table table-bordered">
             <thead>
                 <tr class="table-head">
-                    <td>Timetable Name</td>
+                    <td>Nama</td>
                     <td>Status</td>
                     <td style="width: 10%">Print</td>
                 </tr>
@@ -35,7 +35,7 @@
         </div>
         @else
         <div class="no-data text-center">
-            <p>No timetables generated yet</p>
+            <p>Jadwal Belum digenerate</p>
         </div>
         @endif
     </div>

@@ -24,7 +24,7 @@ class Course extends Model
      *
      * @var array
      */
-    protected $relations = ['professors', 'classes'];
+    protected $relations = ['professors', 'classes', 'unavailable_rooms_courses'];
 
     /**
      * Fields that a keyword search should be carried on
@@ -32,6 +32,15 @@ class Course extends Model
      * @var array
      */
     protected $searchFields = ['name', 'course_code'];
+
+    /**
+     * Get the rooms that are not available to this course
+     */
+
+    public function unavailable_rooms_courses()
+    {
+        return $this->belongsToMany(Room::class, 'unavailable_rooms_courses', 'course_id', 'room_id');
+    }
 
     /**
      * Declare a relationship between this course and the

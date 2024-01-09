@@ -60,6 +60,19 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <label>Pengecualian Ruang</label>
+
+                                <div class="select2-wrapper">
+                                    <select id="rooms-select" name="room_ids[]" class="form-control select2" multiple>
+                                        <option value="">Select rooms</option>
+                                        @foreach ($rooms as $room)
+                                            <option value="{{ $room->id }}">{{ $room->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

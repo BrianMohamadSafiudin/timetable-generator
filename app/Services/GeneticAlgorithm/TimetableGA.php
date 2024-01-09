@@ -67,12 +67,17 @@ class TimetableGA
 
         foreach ($professors as $professor) {
             $unavailableSlotIds = [];
+            $unavailebleRoomIds = [];
 
             foreach ($professor->unavailable_timeslots as $timeslot) {
                 $unavailableSlotIds[] = 'D' . $timeslot->day_id . 'T' . $timeslot->timeslot_id;
             }
 
-            $timetable->addProfessor($professor->id, $unavailableSlotIds);
+            foreach ($professor->unavailable_rooms_professors as $room) {
+                $unavailebleRoomIds[] = $room->id;
+            }
+
+            $timetable->addProfessor($professor->id, $unavailableSlotIds, $unavailebleRoomIds);
         }
 
         // Set up courses
@@ -90,13 +95,18 @@ class TimetableGA
         $courses = Course::whereIn('id', $semesterCourseIds)->get();
 
         foreach ($courses as $course) {
-            $professorIds  = [];
+            $professorIds = [];
+            $unavailebleRoomCourseIds = [];
 
             foreach ($course->professors as $professor) {
                 $professorIds[] = $professor->id;
             }
 
-            $timetable->addModule($course->id, $professorIds);
+            foreach ($course->unavailable_rooms_courses as $room) {
+                $unavailebleRoomCourseIds[] = $room->id;
+            }
+
+            $timetable->addModule($course->id, $professorIds, $unavailebleRoomCourseIds);
         }
 
         // Set up class groups
@@ -133,7 +143,7 @@ class TimetableGA
             $nextTimeslot = TimeslotModel::where('rank', ($currentRank + 1))->first();
 
             if ($nextTimeslot) {
-                $id = 'D' . $day->id  . 'T' . $nextTimeslot->id;
+                $id = 'D' . $day->id . 'T' . $nextTimeslot->id;
             } else {
                 $id = $endId;
             }
@@ -190,7 +200,7 @@ class TimetableGA
                 $algorithm->coolTemperature();
             }
 
-            $solution =  $population->getFittest(0);
+            $solution = $population->getFittest(0);
             $scheme = $timetable->getScheme();
             $timetable->createClasses($solution);
             $classes = $timetable->getClasses();

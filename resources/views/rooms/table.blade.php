@@ -4,8 +4,8 @@
         <table class="table table-bordered">
             <thead>
                 <tr class="table-head">
-                    <th style="width: 50%">Name</th>
-                    <th style="width: 40%">Capacity</th>
+                    <th style="width: 50%">Nama</th>
+                    <th style="width: 40%">Kapasitas</th>
                     <th>Actions</th>
                 </tr>
             </thead>

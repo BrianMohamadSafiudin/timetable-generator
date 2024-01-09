@@ -28,6 +28,7 @@ Timetable.prototype.printTimetable = function(printWin, url) {
         printWin.document.close();
 
         // Wait for the page to load, and after that we print and close the window
+        // Wait for the page to load, and after that we print and close the window
         printWin.onload = function () {
             printWin.focus();
             printWin.print();
